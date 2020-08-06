@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Reader's Niche</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: verdana;
+		}
+		#menuToggle {
+			display: none;
+		}
+
+		header {
+			background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://lh3.googleusercontent.com/NHyygud17Y65sZanzKasy3BoRogl70BRulofSF3h6n6kLnPCRp10b3QH0Sugd4pswS9-doIsW1NRt0s49hijroYK-TtZN59QiuedaL0RXSv2gxI0gvVS5WzLPbqTykX-x4zuDPX2SA=w2400);
+			height: 100vh;
+			background-size: cover;
+			background-position: center;
+		}
+		.one {
+			float: right;
+			list-style-type: none;
+			margin-top: 4%;
+			margin-right: 5%;
+		}
+		ul li {
+			display: inline-block;
+		}
+		ul li a {
+			text-decoration: none;
+			color: white;
+			font-size: 20px;
+			padding: 5px 20px;
+			border: 2px solid white;
+			transition: 0.6s ease;
+		}
+		ul li a:hover {
+			background-color: white;
+			color: black;
+		}
+		.logo {
+			position: absolute;
+			top: 1%;
+			left: 1%;
+		}
+		.logo img {
+			float: left;
+			width: 150px;
+			height: auto;
+		}
+		.logo img:hover {
+			background-color: rgba(0,0,0,0.5);
+			border : 2px solid white;
+			border-radius: 10px;
+		}
+		.myheader {
+			width: 100%;
+		}
+		.title {
+			position: absolute;
+			top: 55%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.title h1 {
+			color: white;
+			font-size: 50px;
+			text-align: center;
+			text-shadow: 4px 4px 6px black;
+		}
+		.title h1.author {
+			font-size: 20px; 
+			text-align: center;
+		}
+		.button {
+			position: absolute;
+			top: 92%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.butt {
+			border: 2px solid white;
+			padding: 10px 30px;
+			color: white;
+			margin: 10px;
+			
+			box-shadow: 0px 3px 0px #2b638f;
+			text-decoration: none;
+			transition: 0.6s ease;
+			border-radius: 50px;
+		}
+		.butt:hover {
+			background-color: white;
+			color: black;
+		}
+		.three {
+			float: left;
+			width: 25%;
+			height: auto;
+			margin: 4.16%;
+			background-color: black;
+			border-radius: 25px;
+			transition: 0.6s ease;
+		}
+		.three:hover {
+			background-color: rgba(0,0,0,0.5);
+		}
+		.oneimg img {
+			float: left;
+			width: 45%;
+			margin: 5% 25%;
+			border-radius: 25px;
+		}
+		footer {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		.footercontainer {
+			float: left;
+			width: 100%;
+			margin: 0;
+			padding-top: 2%;
+			background-color: black;
+		}
+		.footercontainer hr {
+			width: 80%;
+			position: absolute;
+			left: 10%;
+			opacity: 0.5;
+		}
+		.f-panel-one {
+			float: left;
+			width: 30%;
+			padding-left: 10%;
+			padding-top: 2%;
+			padding-bottom: 3%;
+			background-color: black;
+			color: white;
+		}
+		.f-panel-one img {
+			width: 40%;
+			height: auto;
+			margin-bottom: 2%;
+			margin-left: 4%;
+		}
+		.f-panel-one p {
+			font-size: 1.5vw;
+			line-height: 140%;
+			margin-bottom: 4%;
+		}
+		.f-panel-one h3 {
+			margin-left: 5%;
+			text-shadow: 1px 2px grey;
+			font-size: 2vw;
+		}
+		.f-panel-two {
+			float: left;
+			width: 50%;
+			padding-left: 10%;
+			padding-top: 5%;
+			padding-bottom: 3%;
+		}
+		.f-panel-two-one {
+			float: left;
+			width: 25%;
+		}
+		.f-panel-two-two {
+			float: left;
+			width: 25%;
+		}
+		.f-panel-two ul li {
+			margin: 10%;
+			display: block;
+		}
+		.f-links li a {
+			border: 1px solid transparent;
+			transition: 0.3s ease;
+			font-size: 2vw;
+		}
+		.f-links li a:hover {
+			color: tomato;
+			background-color: black;
+		}
+		@media screen and (max-width: 850px) {
+			.logo {
+				position: absolute;
+				top: 15%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.one {
+				position: absolute;
+				top: 40%;
+				left: 46%;
+				transform: translate(-50%,-50%);
+			}
+			.one li {
+				display: block;
+				text-align: center;
+				margin: 20%;
+				width: 100%;
+			}
+			.title {
+			    position: absolute;
+			    top: 69%;
+			    left: 50%;
+			    transform: translate(-50%,-50%);
+		    }
+		    .title h1 {
+			    color: white;
+			    font-size: 20px;
+			    text-align: center;
+		    }
+		    .title h1.author {
+			    font-size: 13px; 
+			    text-align: center;
+			}
+			.button {
+				position: absolute;
+			    top: 90%;
+			    left: 49%;
+			    transform: translate(-50%,-50%);
+			}
+			.butt {
+				width: 80%;
+				float: left;
+				text-align: center;
+				margin-top: 2%;
+			}
+		}
+		@media screen and (max-width: 580px) {
+			.button {
+				position: absolute;
+			    top: 90%;
+			    left: 47.5%;
+			    transform: translate(-50%,-50%);
+			}
+		}
+		@media screen and (max-width: 500px) {
+			.button {
+				position: absolute;
+			    top: 90%;
+			    left: 46%;
+			    transform: translate(-50%,-50%);
+			}
+		}
+		@media screen and (max-width: 480px) {
+			header {
+				margin: 0;
+				padding: 0;
+				overflow-x: hidden;
+
+			}
+			.one {
+				margin: 0;
+				padding: 0;
+				display: none;
+			}
+			.title {
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%,-50%);
+		    }
+		    .title h1 {
+		    	font-size: 25px;
+		    }
+		    .button {
+		    	position: absolute;
+			    top: 85%;
+			    left: 46%;
+			    transform: translate(-50%,-50%);
+			}
+			.three {
+			    float: left;
+			width: 70%;
+			height: auto;
+			margin: 5% 15%;
+			background-color: black;
+			transition: 0.6s ease;
+		}
+		.oneimg img {
+			float: left;
+			width: 80%;
+			margin: 5% 10%;
+		}
+		.f-panel-one {
+			float: left;
+			width: 100%;
+		}
+		.f-panel-one img {
+			float: left;
+			margin-left: 20%;
+		}
+		.f-panel-one p {
+			float: left;
+			width: 80%;
+			text-align: center;
+			font-size: 2vw;
+		}
+		.f-panel-one h3 {
+			float: left;
+			margin-left: 25%;
+			font-size: 5vw;
+		}
+		.f-panel-two {
+			float: left;
+			width: 100%;
+		}
+		.f-panel-two-one {
+			float: left;
+			margin-top: 7%;
+			margin-bottom: 7%;
+			margin-left: 5%;
+		}
+		.f-panel-two-two {
+			float: left;
+			margin-top: 7%;
+			margin-bottom: 7%;
+			margin-left: 10%;
+		}
+		.f-links li a {
+			font-size: 3vw;
+
+		}
+		
+		#menuToggle {
+			display: block;
+		    position: relative;
+            top: 50px;
+            left: 50px;
+  
+            z-index: 1;
+  
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        #menuToggle a {
+        	text-decoration: none;
+        	color: #232323;
+  
+            transition: color 0.3s ease;
+        }
+        #menuToggle a:hover {
+        	color: tomato;
+        }
+        #menuToggle input {
+        	display: block;
+        	width: 40px;
+        	height: 32px;
+        	position: absolute;
+        	top: -7px;
+        	left: -8px;
+        	cursor: pointer;
+        	opacity: 0;
+        	z-index: 2; 
+        	-webkit-touch-callout: none;
+        }
+        #menuToggle span {
+        	display: block;
+        	width: 33px;
+        	height: 4px;
+        	margin-bottom: 5px;
+        	position: relative;
+        	background: #cdcdcd;
+        	border-radius: 3px;
+        	z-index: 1;
+        	transform-origin: 4px 0px;
+        	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+          }
+          #menuToggle span:first-child {
+          	transform-origin: 0% 0%;
+          }
+          #menuToggle span:nth-last-child(2) {
+          	transform-origin: 0% 100%;
+          }
+          #menuToggle input:checked ~ span {
+          	opacity: 1;
+          	transform: rotate(45deg) translate(-2px, -1px);
+          	background: #232323;
+          }
+          #menuToggle input:checked ~ span:nth-last-child(3) {
+          	opacity: 0;
+          	transform: rotate(0deg) scale(0.2, 0.2);
+          }
+          #menuToggle input:checked ~ span:nth-last-child(2) {
+          	transform: rotate(-45deg) translate(0, -1px);
+          }
+          #menu {
+          	position: absolute;
+            width: 100%;
+            margin: -25% 0% 0% -20%;
+            padding: 5%;
+            padding-top: 10%;
+            background: #ededed;
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        }
+        #menu li {
+        	padding: 0 40%;
+            font-size: 25px;
+            margin: 90px 5px;
+            display: block;
+        }
+        #menuToggle input:checked ~ ul {
+        	transform: none;
+        }
+    }
+	</style>
+</head>
+<body>
+	<header>
+		<div class="myheader">
+			<div class="logo">
+				<img src="https://lh3.googleusercontent.com/bVrsbAjQgfhVTxvnZr6vrN7RnmM1hrs7eWm31UbcI-QPycX3-_S6DbXW_07e-QNTyykpjpQ3ZzeyDJttCaYu3_wIoLN-OHCHqJ1hd0ZkzxPQ-HVVY1EYBx9U6s0Gh8jlDLj3SQ3aWQ=w2400">
+			</div>
+			<nav role="navigation">
+  <div id="menuToggle">
+    
+    <input type="checkbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+      <a href="#"><li>HOME</li></a>
+      <a href="#"><li>EXPLORE</li></a>
+      <a href="#"><li>HELP</li></a>
+      <a href="#"><li>ABOUT</li></a>
+      
+    </ul>
+  </div>
+</nav>
+			<ul class="one">
+				<li><a href="#"> HOME </a></li>
+				<li><a href="#"> EXPLORE </a></li>
+				<li><a href="#"> HELP </a></li>
+				<li><a href="#"> ABOUT </a></li>
+			</ul>
+		</div>
+		<div class="title">
+			<h1> A reader lives a thousand lives before he dies, those who never read live only one.</h1>
+			<br>
+			<h1 class="author"> George R. R. Martin </h1>
+		</div>
+		<div class="button">
+			<a href="#" class="butt"> Today's Top Pick </a>
+			<a href="#" class="butt"> Most Popular </a>
+		</div>
+	</header>
+	<div class="main">
+		<a href="#"><img class="three" src="https://lh3.googleusercontent.com/2AgdyCksTMWYiwseELbwkps9Sut6wCNkNEFdUSvBvzEkuDPes1zG0QpptbK5tjfHsX75V-ABxRChaMCkti3etXHLoRoGB-g0OeJjhppJ2ZwL78jKGR4ZXHXH9CdH57eSbz1eOFX6lQ=w2400"></a>
+		<a href="#"><img class="three" src="https://lh3.googleusercontent.com/KiWB2AchpLHntXkxSYxAl_ykb-Nemm6g51zWtXrhUl57UOCI-2MYEODzhOrD1kjPe1C_8FW-fH65MB9bmOG962aNpQe9AhZbcBPArswtXAvxF5iYr0IiRoTkf8tAoIimucyP9U4UCw=w2400"></a>
+		<a href="#"><img class="three" src="https://lh3.googleusercontent.com/0jQQ-7ZHLIETkXea8CVFMhXayGVDvSa8UOO4EodenpRAdiRkfHPLutlbrcRnk_fpz1hnkLBJzl-98ryCsGQWcl2J5rp3jZ_d1aW1JJg8y3H7srV5AGl-Fo7xHoVmLbTCidST1TRJbg=w2400"></a>
+	</div>
+	<div class="oneimg">
+		<img src="https://lh3.googleusercontent.com/oQwMwowwt5CGSRg3RGldzkcOaT3jVIQhgDH7gUm4e75MIngdKqjbfjeutH-dqiaLsxL-wUaHG1KH6Jzg4trxoJYaIRpqy5PNObwLhNdisS4T-QV0gnlylffk23ac5y5SG-nmj3G_jg=w2400">
+	</div>
+
+	<footer>
+		<div class="footercontainer">
+			<hr>
+			<div class="f-panel-one">
+				<img src="https://lh3.googleusercontent.com/bVrsbAjQgfhVTxvnZr6vrN7RnmM1hrs7eWm31UbcI-QPycX3-_S6DbXW_07e-QNTyykpjpQ3ZzeyDJttCaYu3_wIoLN-OHCHqJ1hd0ZkzxPQ-HVVY1EYBx9U6s0Gh8jlDLj3SQ3aWQ=w2400">
+				<p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing elit,Lorem ipsum dolor sit amet.</p>
+				<h3> Follow us </h3>
+			</div>
+			<div class="f-panel-two">
+				<div class="f-panel-two-one">
+				<ul class="f-links">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+				</div>
+				<div class="f-panel-two-two">
+				<ul class="f-links">
+					<li><a href="#">News</a></li>
+					<li><a href="#">Join</a></li>
+					<li><a href="#">Newsletter</a></li>
+					<li><a href="#">Feedback</a></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
